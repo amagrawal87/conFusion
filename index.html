@@ -16,39 +16,90 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+    <nav class="navbar navbar-dark navbar-toggleable-sm  fixed-top">
         <div class = "container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
-                
             </button>
-             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
+             <a class="navbar-brand" href="#"><img src="img/logo.png" height="40" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
+                <!--<ul class="navbar-nav mr-auto"> -->
                 <ul class="navbar-nav mr-auto">
-            </div>
-            <ul class="navbar-nav mr-auto">
                 <li class="nav-item-active"><a class ="nav-link" href ="#"><span class = "fa fa-home fa-lg"> </span>Home</a></li>
                 <li class="nav-item"><a class ="nav-link" href ="./aboutus.html"><span class = "fa fa-info fa-lg"> </span>About</a></li>
                 <li class="nav-item"><a class ="nav-link" href ="#"><span class = "fa fa-list fa-lg"></span>Menu</a></li>
                 <li class="nav-item"><a class ="nav-link" href ="./contactus.html"><span class = "fa fa-address-card fa-lg"></span>Contact</a></li>
-            </ul>
+                </ul>
+            </div>
+          
+            <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span> Login</a>
+            </span>
         </div>
+        
     </nav>
+     <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class "col-12 col-sm-6">
+                <div class ="col-12 col-sm-6 ">
                     <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                    <p class="lead">We take inspiration from the World's best cuisines, and create a unique fusion experience. 
+                    Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-               
-                <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
+                <div class="col-12 col-sm-6 align-self-center" >
+                    <div class = "row">
+                        <div class="col-12 col-sm-6 text-center" >
+                            <img src="img/logo.png" class="img-fluid">
+                        </div>
+                        <div class="col-12 col-sm-6 text-center align-self-center" >
+                            <a class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="or Call us at <br><strong>+852 12345678</strong>" 
+                                data-placement="bottom" href="#formSection" role="button" >Reserve Table</a>
+                        </div>
+
                 </div>
                 
             </div>
         </div>
+    </div>
     </header>
 
     <div class="container">
@@ -56,7 +107,7 @@
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
-             <div class="media">
+             <div class="media col-sm-8">
                     <img class="d-flex mr-3 img-thumbnail align-self-center"
                             src="img/uthappizza.png" alt="Uthappizza">
                     <div class="media-body">
@@ -71,13 +122,18 @@
 
 
         <div class = "row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-sm-4 order-sm-last col-md-3">
+            <div class="col-12 col-sm-4 col-sm-4 order-sm-first col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div  class="col-12 col-sm order-sm-first col-md">
-                <h2>Weekend Grand Buffet</h2>
+            <div  class="col-12 col-sm-4 order-sm-second col-md">
+                <h2>Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
             </div>
+            <div class="media col-sm-4" >
+                <img class="d-flex mr-3 img-thumbnail align-last" src="img/buffet.png" alt="Uthappizza">
+            </div>
+
+            
         </div>
 
         <div class="row row-content align-items-center">
@@ -85,8 +141,7 @@
                 <h3>Meet our Culinary Specialists</h3>
             </div>
               <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center"
-                            src="img/alberto.png" alt="Alberto Somayya">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="Alberto Somayya">
                     <div class="media-body">
                         <h2 class="mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
@@ -99,6 +154,86 @@
                 </div>
         </div>
     </div>
+
+    <div class="container">
+        <div id="formSection">
+        <div class="row row-content align-items-center">
+           
+       
+            <div class="col-sm-8">
+                
+                
+                    <div class = "card-header text-white bg-warning">
+                        Reserve a Table 
+                    </div>
+                    <div class="card-body border">
+
+                        <form id="testform">
+
+                           
+                        <div class="form-group">
+                            <label for="Number of guests" >Number Of Guests</label>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="guest-one" name="guest-one" class="custom-control-input">
+                                <label class="custom-control-label" for="guest-one">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="guest-two" name="guest-two" class="custom-control-input">
+                                 <label class="custom-control-label" for="guest-two">2</label>
+                            </div>
+                             <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="guest-three" name="guest-three" class="custom-control-input">
+                                 <label class="custom-control-label" for="guest-three">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="guest-four" name="guest-four" class="custom-control-input">
+                                 <label class="custom-control-label" for="guest-four">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="guest-five" name="guest-five" class="custom-control-input">
+                                 <label class="custom-control-label" for="guest-five">5</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="guest-six" name="guest-six" class="custom-control-input">
+                                 <label class="custom-control-label" for="guest-six">6</label>
+                            </div>
+                         
+                         </div>
+
+                         <div class = "form-group">
+                            <label for="Date and Time"> Date and Time</label>
+                            <input type="text" name="data-target" placeholder="Date">
+                            <input type="text" name="data-target" placeholder="Time">
+
+
+                        </div>
+                        <div class = "form-group text-center">
+                            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Reserve
+                            </button>
+                        </div>
+
+
+
+                        <div class = "form-group">
+
+                        </div>
+
+
+
+
+                         
+                        </form>
+                    </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
     <footer>
         <div class="container">
@@ -146,6 +281,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 </body>
 
